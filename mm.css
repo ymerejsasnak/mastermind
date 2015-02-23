@@ -1,0 +1,35 @@
+body {
+  background: linear-gradient(#AAE, #AAD);
+}
+
+.row {
+  clear: left;
+  width: 190px;
+  border-bottom: 1px solid #111;
+}
+
+.row:first-child {
+  border-bottom: none;
+}
+
+.label {
+  float: left;
+  width: 20px;
+  margin-top: 11px;
+
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+
+}
+
+.hole {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin: 1px;
+  background: #111;
+  border-radius: 50%;
+}
+
+
