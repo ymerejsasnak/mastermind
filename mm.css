@@ -4,13 +4,11 @@ body {
 
 .row {
   clear: left;
-  width: 190px;
+  width: 230px;
   border-bottom: 1px solid #111;
 }
 
-.row:first-child {
-  border-bottom: none;
-}
+
 
 .label {
   float: left;
@@ -25,11 +23,59 @@ body {
 
 .hole {
   float: left;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   margin: 1px;
   background: #111;
+  border: 1px solid black;
   border-radius: 50%;
 }
 
 
+.answer-pegs {
+  float: left;
+  width: 40px;
+  height: 40px;
+
+}
+
+.peg {
+  float: left;
+  width: 18px;
+  height: 18px;
+  
+
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+
+
+#colors {
+  position: absolute;
+  top: 92px;
+  left: 250px;
+  width: 40px;
+  height: 240px;
+
+}
+
+.color-select {
+  width: 38px;
+  height: 38px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+#red {background: red;}
+#green {background: green;}
+#blue {background: blue;}
+#yellow {background: yellow;}
+#brown {background: brown;}
+#pink {background: pink;}
+
+
+
+#row-answer {
+  display: block;
+}
