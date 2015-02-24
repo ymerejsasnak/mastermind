@@ -67,15 +67,20 @@ body {
   border-radius: 50%;
 }
 
-#red {background: red;}
-#green {background: green;}
-#blue {background: blue;}
-#yellow {background: yellow;}
-#brown {background: brown;}
-#pink {background: pink;}
+.color-select:hover {
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.red {background: red;}
+.green {background: green;}
+.blue {background: blue;}
+.yellow {background: yellow;}
+.brown {background: brown;}
+.pink {background: pink;}
 
 
 
 #row-answer {
-  display: block;
+  /* display: none; */
 }
