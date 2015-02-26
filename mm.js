@@ -54,14 +54,19 @@ $(function() {
         guess[i] = 99;
       }
     }
-    
-
-
-    console.log(this.hintPegs);
   };
 
   Game.prototype.showHints = function() {
-
+    for (var i = 0; i < 4; i++) {
+      if (this.hintPegs.black > 0) {
+        $("#row" + game.currentRow + " .peg:nth-child(" + (i + 1) + ")").addClass("black");
+        this.hintPegs.black--;
+      }
+      else if (this.hintPegs.white > 0) {
+        $("#row" + game.currentRow + " .peg:nth-child(" + (i + 1) + ")").addClass("white");
+        this.hintPegs.white--;
+      }
+    }
   };
 
   
