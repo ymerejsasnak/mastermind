@@ -21,36 +21,48 @@ $(function() {
     this.sequence =[this.colors[Math.floor(Math.random() * 6)], 
                     this.colors[Math.floor(Math.random() * 6)], 
                     this.colors[Math.floor(Math.random() * 6)], 
-                    this.colors[Math.floor(Math.random() * 6)]]
+                    this.colors[Math.floor(Math.random() * 6)]];
   };
 
   Game.prototype.setSequence = function() {
     //set colors from sequence to answer divs in game display
     this.sequence.forEach(function(color, index) {
       $("#row-solution .hole:nth-child(" + (index + 2) + ")").addClass(color);  
-    })
+    });
   };
 
   Game.prototype.checkGuess = function() {
-    
-    //working on this...maybe instead need to put both arrays into seperate arrays that I can delete from as I check
+    //use concat as easy way to copy array by value (don't need to do this for guess array though)
+    var seq = this.sequence.concat();
+    var guess = this.guess;
 
-    //detect correct color and placement
-    this.guess.forEach(function(guessCol, guessIndex) {
-      if (guessCol === this.sequence[guessIndex]) {
-        this.hintPegs.black++;        
+    for (var i = 0; i < 4; i++){
+      //check for correct color and position
+      if (guess[i] === seq[i]) {
+        this.hintPegs.black++;
+        //then mark guess color as checked
+        //(using *different* meaningless placeholder numbers so they don't match below)
+        seq[i] = 9;
+        guess[i] = 99;
       }
-      
-
-    }.bind(this));
-
+    }
+    for (var i = 0; i < 4; i++) {
+      //check for correct color, wrong position
+      if (seq.indexOf(guess[i]) > -1) {
+        this.hintPegs.white++;
+        seq[seq.indexOf(guess[i])] = 9;
+        guess[i] = 99;
+      }
+    }
     
-    console.log(this.hintPegs)
-  }
+
+
+    console.log(this.hintPegs);
+  };
 
   Game.prototype.showHints = function() {
 
-  }
+  };
 
   
   
@@ -69,10 +81,10 @@ $(function() {
       game.currentRow++;
       //reset guesses and hints
       game.guess = [];
-      game.hintPegs = {black: 0, white: 0}
+      game.hintPegs = {black: 0, white: 0};
     }
 
-  })
+  });
 
 
 
@@ -82,10 +94,10 @@ $(function() {
 
 
 
-  var game = new Game;
+  var game = new Game();
 
-  game.createSequence()
-  game.setSequence()
+  game.createSequence();
+  game.setSequence();
 
 
-})
+});
