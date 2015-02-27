@@ -4,9 +4,11 @@ Mastermind game in JS (etc)
 
 TODO:
 
-hide answer code until end
+overall game controls (replay, scoring?, etc.)
 
-overall game controls (win/lose conditions, replay, scoring?, etc.)
+fix bug where it says you failed if you win on last turn
+
+also game must STOP after win/lose (currently does not)
 
 nicer visuals, some effects and animations, etc.
 
