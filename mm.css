@@ -83,6 +83,22 @@ body {
 .black {background: black;}
 
 
+
 #row-solution {
-  /* display: none; */
+  display: none;
+}
+
+
+
+#message {
+  /*display: none;*/
+  position: absolute;
+  top: 7px;
+  left: 245px;
+  height: 65px;
+  width: 70px;
+  border: 1px solid black;
+  background: white;
+  padding: 5px;
+  font-size: 0.9em;
 }

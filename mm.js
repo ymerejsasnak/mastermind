@@ -54,6 +54,13 @@ $(function() {
         guess[i] = 99;
       }
     }
+
+    //if 4 blacks, show that answer matches
+    if (this.hintPegs.black === 4) {
+      $("#row-solution").fadeIn();
+      $("#message").text("Congrats!  You cracked the code!").css("color", "green");
+    }
+
   };
 
   Game.prototype.showHints = function() {
@@ -70,6 +77,14 @@ $(function() {
   };
 
   
+
+
+
+
+
+
+
+
   
   //handler for selection of color guesses
   $("#colors div").on("click", function() {
@@ -87,6 +102,12 @@ $(function() {
       //reset guesses and hints
       game.guess = [];
       game.hintPegs = {black: 0, white: 0};
+    }
+
+    //if lost show solution (BUG -- currently shows fail message if you crack the code on the last turn!)
+    if (game.currentRow > 10) {
+      $("#row-solution").fadeIn();
+      $("#message").text("Sorry, you failed to crack the code.").css("color", "red");
     }
 
   });
