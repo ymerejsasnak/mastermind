@@ -16,8 +16,12 @@ body {
   margin-top: 11px;
 
   border: 1px solid black;
-  background: white;
+  border-radius: 5px;
+
+  background: #EEE;
   text-align: center;
+
+  box-shadow: 2px 2px 2px black;
 
 }
 
@@ -26,9 +30,11 @@ body {
   width: 38px;
   height: 38px;
   margin: 1px;
-  background: #111;
+  background: none;
   border: 1px solid black;
   border-radius: 50%;
+
+  box-shadow: inset 3px 3px 12px white, 1px 1px 1px black;
 }
 
 
@@ -47,6 +53,7 @@ body {
 
   border: 1px solid black;
   border-radius: 50%;
+  box-shadow: inset 1px 1px 3px white, 1px 1px 1px black;
 }
 
 
@@ -58,13 +65,17 @@ body {
   width: 40px;
   height: 240px;
 
+
 }
 
 #colors div {
   width: 38px;
   height: 38px;
-  border: 1px solid black;
+  margin: 1px;
   border-radius: 50%;
+
+  border: 1px solid black;
+  box-shadow: inset 3px 3px 12px white, 1px 1px 1px black;
 }
 
 #colors div:hover {
@@ -77,10 +88,9 @@ body {
 .blue {background: blue;}
 .yellow {background: yellow;}
 .brown {background: brown;}
-.pink {background: pink;}
-
-.white {background: white;}
 .black {background: black;}
+.white {background: lightgray;}
+
 
 
 
@@ -91,14 +101,16 @@ body {
 
 
 #message {
-  /*display: none;*/
   position: absolute;
+  text-align: center;
   top: 7px;
   left: 245px;
   height: 65px;
   width: 70px;
   border: 1px solid black;
-  background: white;
+  border-radius: 15px;
+  background: #EEE;
   padding: 5px;
   font-size: 0.9em;
+  box-shadow: 1px 1px 1px 1px black;
 }

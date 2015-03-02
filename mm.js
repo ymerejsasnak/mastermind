@@ -6,7 +6,7 @@ $(function() {
   
 
   function Game() {
-    this.colors = ["red", "blue", "green", "yellow", "brown", "pink"];
+    this.colors = ["red", "blue", "green", "yellow", "brown", "black"];
     this.hintPegs = {black: 0, white: 0};
 
     this.currentRow = 1;
